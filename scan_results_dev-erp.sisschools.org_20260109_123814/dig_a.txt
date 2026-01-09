@@ -1,0 +1,13 @@
+Tool: dig_a
+Command: dig A dev-erp.sisschools.org +short
+Target: http://dev-erp.sisschools.org
+Correlation ID: 20260109_123814
+Execution Time: 2026-01-09T12:38:15.551262
+Return Code: 0
+======================================================================
+
+STDOUT:
+16.79.38.180
+
+STDERR:
+[No errors]

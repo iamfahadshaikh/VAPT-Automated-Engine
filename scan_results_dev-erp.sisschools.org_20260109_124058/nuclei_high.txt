@@ -1,0 +1,13 @@
+Tool: nuclei_high
+Command: nuclei -u https://dev-erp.sisschools.org/ -tags high -silent
+Target: https://dev-erp.sisschools.org
+Correlation ID: 20260109_124058
+Execution Time: 2026-01-09T12:43:10.362873
+Return Code: 1
+======================================================================
+
+STDOUT:
+[No output]
+
+STDERR:
+[[1;31mFTL[0m] Could not run nuclei: no templates provided for scan

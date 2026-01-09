@@ -1,0 +1,39 @@
+Tool: nikto
+Command: nikto -h https://dev-erp.sisschools.org
+Target: http://dev-erp.sisschools.org
+Correlation ID: 20260109_124516
+Execution Time: 2026-01-09T12:47:00.944798
+Return Code: 124
+======================================================================
+
+STDOUT:
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          16.79.38.180
++ Target Hostname:    dev-erp.sisschools.org
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=*.sisschools.org
+                   Altnames: *.sisschools.org, sisschools.org
+                   Ciphers:  TLS_AES_256_GCM_SHA384
+                   Issuer:   /C=GB/O=Sectigo Limited/CN=Sectigo Public Server Authentication CA DV R36
++ Start Time:         2026-01-09 12:45:32 (GMT5.5)
+---------------------------------------------------------------------------
++ Server: nginx
++ /: Retrieved access-control-allow-origin header: https://dev-erp.sisschools.org.
++ /: Drupal Link header found with value: </assets/frappe/dist/css/website.bundle.DWGNJX4N.css>; rel=preload; as=style,</assets/erpnext/dist/css/erpnext-web.bundle.QVWJH5IX.css>; rel=preload; as=style,</assets/frappe/dist/css/login.bundle.S44P6VFQ.css>; rel=preload; as=style,</assets/frappe/dist/js/frappe-web.bundle.MTRV47AB.js>; rel=preload; as=script,</website_script.js>; rel=preload; as=script,</assets/erpnext/dist/js/erpnext-web.bundle.J4A2DQB4.js>; rel=preload; as=script. See: https://www.drupal.org/
++ /: Uncommon header 'x-page-name' found, with contents: login.
++ /: Uncommon header 'x-from-cache' found, with contents: False.
++ /: Cookie sid created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie system_user created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie system_user created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie full_name created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie full_name created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie user_id created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie user_id created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie ; Path created without the secure flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie ; Path created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /op4wcqy8.pm: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
+
+STDERR:
+[No errors]
