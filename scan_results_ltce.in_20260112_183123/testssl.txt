@@ -1,0 +1,13 @@
+Tool: testssl
+Command: testssl.sh https://ltce.in
+Target: ltce.in
+Correlation ID: 20260112_183123
+Execution Time: 2026-01-12T18:37:33.553173
+Return Code: 127
+======================================================================
+
+STDOUT:
+[No output]
+
+STDERR:
+/bin/sh: 1: testssl.sh: not found

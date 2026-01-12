@@ -1,0 +1,1170 @@
+{
+  "profile": {
+    "original_input": "ltce.in",
+    "target_type": "root_domain",
+    "host": "ltce.in",
+    "scheme": "https",
+    "port": 443,
+    "base_domain": null,
+    "scope": "single_host",
+    "resolved_ips": [],
+    "is_resolvable": false,
+    "is_reachable": false,
+    "http_status": null,
+    "ports_hint": [],
+    "is_web_target": true,
+    "is_https": true,
+    "detected_tech": {},
+    "detected_cms": null,
+    "detected_params": [],
+    "has_reflection": false,
+    "is_vulnerable_to_xss": false,
+    "created_at": "2026-01-12T13:01:23.535965"
+  },
+  "ledger": {
+    "created_at": "2026-01-12T18:31:23.536026",
+    "profile": "TargetProfile(type=root_domain, host=ltce.in, scope=single_host, is_reachable=False, is_web=True)",
+    "decisions": {
+      "dig_a": {
+        "decision": "allow",
+        "reason": "Root domain A record resolution",
+        "prerequisites": [],
+        "priority": 10,
+        "timeout": 300
+      },
+      "dig_ns": {
+        "decision": "allow",
+        "reason": "Root domain NS record resolution",
+        "prerequisites": [],
+        "priority": 10,
+        "timeout": 300
+      },
+      "dig_mx": {
+        "decision": "allow",
+        "reason": "Root domain MX record resolution",
+        "prerequisites": [],
+        "priority": 9,
+        "timeout": 300
+      },
+      "dnsrecon": {
+        "decision": "allow",
+        "reason": "Full DNS recon for root domain",
+        "prerequisites": [],
+        "priority": 8,
+        "timeout": 300
+      },
+      "findomain": {
+        "decision": "allow",
+        "reason": "Subdomain enumeration (root domain)",
+        "prerequisites": [],
+        "priority": 15,
+        "timeout": 300
+      },
+      "sublist3r": {
+        "decision": "allow",
+        "reason": "Subdomain enumeration (root domain)",
+        "prerequisites": [],
+        "priority": 14,
+        "timeout": 300
+      },
+      "assetfinder": {
+        "decision": "allow",
+        "reason": "Subdomain enumeration (root domain)",
+        "prerequisites": [],
+        "priority": 13,
+        "timeout": 300
+      },
+      "ping": {
+        "decision": "allow",
+        "reason": "Reachability check",
+        "prerequisites": [],
+        "priority": 5,
+        "timeout": 300
+      },
+      "nmap_quick": {
+        "decision": "allow",
+        "reason": "Quick port scan",
+        "prerequisites": [],
+        "priority": 20,
+        "timeout": 9999
+      },
+      "nmap_vuln": {
+        "decision": "allow",
+        "reason": "Vulnerability-focused nmap",
+        "prerequisites": [],
+        "priority": 19,
+        "timeout": 9999
+      },
+      "whatweb": {
+        "decision": "allow",
+        "reason": "Early web technology detection",
+        "prerequisites": [],
+        "priority": 25,
+        "timeout": 300
+      },
+      "sslscan": {
+        "decision": "allow",
+        "reason": "SSL/TLS certificate analysis",
+        "prerequisites": [],
+        "priority": 18,
+        "timeout": 300
+      },
+      "testssl": {
+        "decision": "allow",
+        "reason": "SSL/TLS vulnerability scan",
+        "prerequisites": [],
+        "priority": 17,
+        "timeout": 300
+      },
+      "gobuster": {
+        "decision": "deny",
+        "reason": "discovery_incomplete_score_50",
+        "prerequisites": [],
+        "priority": 16,
+        "timeout": 9999
+      },
+      "dirsearch": {
+        "decision": "deny",
+        "reason": "discovery_incomplete_score_50",
+        "prerequisites": [],
+        "priority": 15,
+        "timeout": 300
+      },
+      "nikto": {
+        "decision": "allow",
+        "reason": "Baseline web scan (all targets)",
+        "prerequisites": [],
+        "priority": 14,
+        "timeout": 9999
+      },
+      "wpscan": {
+        "decision": "deny",
+        "reason": "WordPress not detected",
+        "prerequisites": [],
+        "priority": 0,
+        "timeout": 300
+      },
+      "dalfox": {
+        "decision": "DENY",
+        "reason": "BLOCKED: Crawler FAILED - No endpoints discovered by crawler",
+        "prerequisites": [],
+        "priority": 11,
+        "timeout": 300
+      },
+      "xsstrike": {
+        "decision": "DENY",
+        "reason": "BLOCKED: Crawler FAILED - No endpoints discovered by crawler",
+        "prerequisites": [],
+        "priority": 10,
+        "timeout": 300
+      },
+      "sqlmap": {
+        "decision": "DENY",
+        "reason": "BLOCKED: Crawler FAILED - No endpoints discovered by crawler",
+        "prerequisites": [],
+        "priority": 9,
+        "timeout": 300
+      },
+      "commix": {
+        "decision": "DENY",
+        "reason": "BLOCKED: Crawler FAILED - No endpoints discovered by crawler",
+        "prerequisites": [],
+        "priority": 8,
+        "timeout": 9999
+      },
+      "xsser": {
+        "decision": "deny",
+        "reason": "discovery_incomplete_score_50",
+        "prerequisites": [],
+        "priority": 0,
+        "timeout": 300
+      },
+      "nuclei_crit": {
+        "decision": "allow",
+        "reason": "Nuclei critical templates (all targets)",
+        "prerequisites": [],
+        "priority": 6,
+        "timeout": 9999
+      },
+      "nuclei_high": {
+        "decision": "allow",
+        "reason": "Nuclei high severity templates (all targets)",
+        "prerequisites": [],
+        "priority": 5,
+        "timeout": 9999
+      }
+    },
+    "summary": {
+      "total_tools": 24,
+      "allowed": 16,
+      "denied": 4
+    }
+  },
+  "plan": [
+    {
+      "tool": "dnsrecon",
+      "command": "dnsrecon -d ltce.in",
+      "timeout": 30,
+      "category": "DNS",
+      "blocking": true,
+      "requires": [],
+      "optional": [],
+      "produces": [
+        "dns_records"
+      ],
+      "worst_case": 30
+    },
+    {
+      "tool": "findomain",
+      "command": "findomain -t ltce.in -q",
+      "timeout": 60,
+      "category": "Subdomains",
+      "blocking": true,
+      "requires": [],
+      "optional": [],
+      "produces": [
+        "subdomains"
+      ],
+      "worst_case": 60
+    },
+    {
+      "tool": "sublist3r",
+      "command": "sublist3r -d ltce.in -o /dev/null",
+      "timeout": 120,
+      "category": "Subdomains",
+      "blocking": true,
+      "requires": [],
+      "optional": [],
+      "produces": [
+        "subdomains"
+      ],
+      "worst_case": 120
+    },
+    {
+      "tool": "assetfinder",
+      "command": "assetfinder ltce.in",
+      "timeout": 60,
+      "category": "Subdomains",
+      "blocking": true,
+      "requires": [],
+      "optional": [],
+      "produces": [
+        "subdomains"
+      ],
+      "worst_case": 60
+    },
+    {
+      "tool": "ping",
+      "command": "ping -c 1 ltce.in",
+      "timeout": 10,
+      "category": "Network",
+      "blocking": true,
+      "requires": [],
+      "optional": [],
+      "produces": [
+        "reachable"
+      ],
+      "worst_case": 10
+    },
+    {
+      "tool": "nmap_quick",
+      "command": "nmap -F ltce.in",
+      "timeout": 180,
+      "category": "Network",
+      "blocking": true,
+      "requires": [
+        "reachable"
+      ],
+      "optional": [],
+      "produces": [
+        "ports_known"
+      ],
+      "worst_case": 180
+    },
+    {
+      "tool": "nmap_vuln",
+      "command": "nmap -sV --script vuln --script-timeout 60s --host-timeout 120s ltce.in",
+      "timeout": 240,
+      "category": "Network",
+      "blocking": true,
+      "requires": [
+        "ports_known"
+      ],
+      "optional": [],
+      "produces": [
+        "vuln_signal"
+      ],
+      "worst_case": 240
+    },
+    {
+      "tool": "whatweb",
+      "command": "whatweb https://ltce.in -a 3",
+      "timeout": 60,
+      "category": "Web",
+      "blocking": true,
+      "requires": [
+        "web_target"
+      ],
+      "optional": [],
+      "produces": [
+        "tech_stack_detected"
+      ],
+      "worst_case": 60
+    },
+    {
+      "tool": "nikto",
+      "command": "nikto -h https://ltce.in",
+      "timeout": 120,
+      "category": "Web",
+      "blocking": true,
+      "requires": [
+        "web_target"
+      ],
+      "optional": [],
+      "produces": [
+        "web_findings"
+      ],
+      "worst_case": 120
+    },
+    {
+      "tool": "sslscan",
+      "command": "sslscan ltce.in",
+      "timeout": 120,
+      "category": "SSL",
+      "blocking": true,
+      "requires": [
+        "https"
+      ],
+      "optional": [],
+      "produces": [
+        "tls_findings"
+      ],
+      "worst_case": 120
+    },
+    {
+      "tool": "testssl",
+      "command": "testssl.sh https://ltce.in",
+      "timeout": 240,
+      "category": "SSL",
+      "blocking": true,
+      "requires": [
+        "https"
+      ],
+      "optional": [],
+      "produces": [
+        "tls_findings"
+      ],
+      "worst_case": 240
+    },
+    {
+      "tool": "nuclei_crit",
+      "command": "nuclei -u https://ltce.in -tags critical -silent",
+      "timeout": 600,
+      "category": "Nuclei",
+      "blocking": true,
+      "requires": [
+        "web_target"
+      ],
+      "optional": [
+        "endpoints_known",
+        "live_endpoints",
+        "ports_known"
+      ],
+      "produces": [
+        "web_findings"
+      ],
+      "worst_case": 600
+    },
+    {
+      "tool": "nuclei_high",
+      "command": "nuclei -u https://ltce.in -tags high -silent",
+      "timeout": 600,
+      "category": "Nuclei",
+      "blocking": true,
+      "requires": [
+        "web_target"
+      ],
+      "optional": [
+        "endpoints_known",
+        "live_endpoints",
+        "ports_known"
+      ],
+      "produces": [
+        "web_findings"
+      ],
+      "worst_case": 600
+    }
+  ],
+  "execution": [
+    {
+      "index": 1,
+      "total": 19,
+      "tool": "dnsrecon",
+      "category": "DNS",
+      "status": "SUCCESS",
+      "outcome": "EXECUTED_NO_SIGNAL",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:31:27.407176",
+      "finished_at": "2026-01-12T18:31:30.481575",
+      "stderr_preview": "2026-01-12T18:31:28.219005+0530 INFO Starting enumeration for domain: ltce.in\n2026-01-12T18:31:28.220166+0530 INFO std: Performing General Enumeration against: ltce.in...\n2026-01-12T18:31:28.376833+0530 ERROR No answer for DNSSEC query for ltce.in\n2026-01-12T18:31:28.461483+0530 INFO \t SOA ns1.dnsmatrix.net 139.162.25.221\n2026-01-12T18:31:28.503036+0530 INFO \t NS ns1.dnsmatrix.net 139.162.25.221\n2026-01-12T18:31:28.608016+0530 ERROR \t Recursion enabled on NS Server 139.162.25.221\n2026-01-12T18:31:28.677657+0530 INFO \t Bind Version for 139.162.25.221 \"9.16.23-RH\"\n2026-01-12T18:31:28.677865+0530 INFO \t NS ns2.dnsmatrix.net 139.162.25.221\n2026-01-12T18:31:28.737446+0530 ERROR \t Recursion enabled on NS Server 139.162.25.221\n2026-01-12T18:31:28.799109+0530 INFO \t Bind Version for 139.162.25.221 \"9.16.23-RH\"\n2026-01-12T18:31:29.240924+0530 INFO \t MX aspmx.l.google.com 142.251.10.26\n2026-01-12T18:31:29.241168+0530 INFO \t MX alt3.aspmx.l.google.com 142.250.101.27\n2026-01-12T18:31:29.241267+0530 INFO \t MX alt4.aspmx.l.google.com 192.178.164.27\n2026-01-12T18:31:29.241307+0530 INFO \t MX alt1.aspmx.l.google.com 192.178.163.26\n2026-01-12T18:31:29.241359+0530 INFO \t MX alt2.aspmx.l.google.com 172.217.78.26\n2026-01-12T18:31:29.241394+0530 INFO \t MX aspmx.l.google.com 2404:6800:4003:c06::1a\n2026-01-12T18:31:29.241424+0530 INFO \t MX alt3.aspmx.l.google.com 2607:f8b0:4023:c06::1a\n2026-01-12T18:31:29.241474+0530 INFO \t MX alt4.aspmx.l.google.com 2607:f8b0:4023:2009::1b\n2026-01-12T18:31:29.241517+0530 INFO \t MX alt1.aspmx.l.google.com 2607:f8b0:400e:c17::1b\n2026-01-12T18:31:29.241548+0530 INFO \t MX alt2.aspmx.l.google.com 2607:f8b0:4023:1c05::1a\n2026-01-12T18:31:29.253795+0530 INFO \t A ltce.in 103.159.239.51\n2026-01-12T18:31:29.543861+0530 INFO \t TXT ltce.in google-gws-recovery-domain-verification=65691022\n2026-01-12T18:31:29.752232+0530 INFO Enumerating SRV Records\n2026-01-12T18:31:30.398693+0530 ERROR No SRV Records Found for ltce.in\n2026-01-12T18:31:30.398939+0530 INFO Completed enu... [truncated]",
+      "stderr_length": 2028,
+      "stderr_truncated": true,
+      "signal": "NO_SIGNAL",
+      "output_file": "scan_results_ltce.in_20260112_183123/dnsrecon.txt"
+    },
+    {
+      "index": 2,
+      "total": 19,
+      "tool": "findomain",
+      "category": "Subdomains",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:31:30.487640",
+      "finished_at": "2026-01-12T18:31:31.777433",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/findomain.txt"
+    },
+    {
+      "index": 3,
+      "total": 19,
+      "tool": "sublist3r",
+      "category": "Subdomains",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:31:32.808463",
+      "finished_at": "2026-01-12T18:32:54.374635",
+      "stderr_preview": "Process DNSdumpster-8:\nTraceback (most recent call last):\n  File \"/usr/lib/python3.13/multiprocessing/process.py\", line 313, in _bootstrap\n    self.run()\n    ~~~~~~~~^^\n  File \"/home/iamfahadshaikh/.local/lib/python3.13/site-packages/sublist3r.py\", line 268, in run\n    domain_list = self.enumerate()\n  File \"/home/iamfahadshaikh/.local/lib/python3.13/site-packages/sublist3r.py\", line 647, in enumerate\n    token = self.get_csrftoken(resp)\n  File \"/home/iamfahadshaikh/.local/lib/python3.13/site-packages/sublist3r.py\", line 641, in get_csrftoken\n    token = csrf_regex.findall(resp)[0]\n            ~~~~~~~~~~~~~~~~~~~~~~~~^^^\nIndexError: list index out of range",
+      "stderr_length": 663,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/sublist3r.txt"
+    },
+    {
+      "index": 4,
+      "total": 19,
+      "tool": "assetfinder",
+      "category": "Subdomains",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:32:54.381823",
+      "finished_at": "2026-01-12T18:33:00.807230",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/assetfinder.txt"
+    },
+    {
+      "index": 5,
+      "total": 19,
+      "tool": "ping",
+      "category": "Network",
+      "status": "SKIPPED",
+      "outcome": "SKIPPED",
+      "reason": "no new signal expected (capabilities already present)",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "skipped_by_policy",
+      "started_at": "2026-01-12T18:33:01.103155",
+      "finished_at": "2026-01-12T18:33:01.103161",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 6,
+      "total": 19,
+      "tool": "nmap_quick",
+      "category": "Network",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:33:01.103329",
+      "finished_at": "2026-01-12T18:33:02.765242",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/nmap_quick.txt"
+    },
+    {
+      "index": 7,
+      "total": 19,
+      "tool": "nmap_vuln",
+      "category": "Network",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:33:02.769737",
+      "finished_at": "2026-01-12T18:35:16.100796",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/nmap_vuln.txt"
+    },
+    {
+      "index": 8,
+      "total": 19,
+      "tool": "whatweb",
+      "category": "Web",
+      "status": "SUCCESS",
+      "outcome": "EXECUTED_NO_SIGNAL",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:35:16.106938",
+      "finished_at": "2026-01-12T18:35:48.562778",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL",
+      "output_file": "scan_results_ltce.in_20260112_183123/whatweb.txt"
+    },
+    {
+      "index": 9,
+      "total": 19,
+      "tool": "nikto",
+      "category": "Web",
+      "status": "PARTIAL",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "unknown_error",
+      "return_code": 141,
+      "timed_out": false,
+      "failure_reason": "unknown_error",
+      "started_at": "2026-01-12T18:35:48.566522",
+      "finished_at": "2026-01-12T18:37:32.603013",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/nikto.txt"
+    },
+    {
+      "index": 10,
+      "total": 19,
+      "tool": "sslscan",
+      "category": "SSL",
+      "status": "SUCCESS",
+      "outcome": "SUCCESS_WITH_FINDINGS",
+      "reason": "Exit code 0",
+      "return_code": 0,
+      "timed_out": false,
+      "failure_reason": "",
+      "started_at": "2026-01-12T18:37:32.608864",
+      "finished_at": "2026-01-12T18:37:33.485857",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/sslscan.txt"
+    },
+    {
+      "index": 11,
+      "total": 19,
+      "tool": "testssl",
+      "category": "SSL",
+      "status": "BLOCKED",
+      "outcome": "BLOCKED",
+      "reason": "tool_not_installed",
+      "return_code": 127,
+      "timed_out": false,
+      "failure_reason": "tool_not_installed",
+      "started_at": "2026-01-12T18:37:33.492029",
+      "finished_at": "2026-01-12T18:37:33.550785",
+      "stderr_preview": "/bin/sh: 1: testssl.sh: not found",
+      "stderr_length": 33,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL",
+      "output_file": "scan_results_ltce.in_20260112_183123/testssl.txt"
+    },
+    {
+      "index": 12,
+      "total": 19,
+      "tool": "gobuster",
+      "category": "Web",
+      "status": "SKIPPED",
+      "outcome": "SKIPPED",
+      "reason": "insufficient runtime budget (1430s < worst-case 9999s)",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "skipped_by_policy",
+      "started_at": "2026-01-12T18:37:33.554040",
+      "finished_at": "2026-01-12T18:37:33.554048",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 13,
+      "total": 19,
+      "tool": "dirsearch",
+      "category": "Web",
+      "status": "FAILED",
+      "outcome": "EXECUTION_ERROR",
+      "reason": "unknown_error",
+      "return_code": 1,
+      "timed_out": false,
+      "failure_reason": "unknown_error",
+      "started_at": "2026-01-12T18:37:33.554174",
+      "finished_at": "2026-01-12T18:37:33.976370",
+      "stderr_preview": "/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import DistributionNotFound, VersionConflict",
+      "stderr_length": 242,
+      "stderr_truncated": false,
+      "signal": "POSITIVE",
+      "output_file": "scan_results_ltce.in_20260112_183123/dirsearch.txt"
+    },
+    {
+      "index": 14,
+      "total": 19,
+      "tool": "dalfox",
+      "category": "XSS",
+      "status": "BLOCKED",
+      "outcome": "BLOCKED",
+      "reason": "payload_readiness_failed: endpoint_missing",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "blocked_by_prerequisite",
+      "started_at": "2026-01-12T18:37:33.983610",
+      "finished_at": "2026-01-12T18:37:33.983632",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 15,
+      "total": 19,
+      "tool": "xsstrike",
+      "category": "XSS",
+      "status": "BLOCKED",
+      "outcome": "BLOCKED",
+      "reason": "payload_readiness_failed: endpoint_missing",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "blocked_by_prerequisite",
+      "started_at": "2026-01-12T18:37:33.983749",
+      "finished_at": "2026-01-12T18:37:33.983753",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 16,
+      "total": 19,
+      "tool": "sqlmap",
+      "category": "SQLi",
+      "status": "BLOCKED",
+      "outcome": "BLOCKED",
+      "reason": "payload_readiness_failed: endpoint_missing",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "blocked_by_prerequisite",
+      "started_at": "2026-01-12T18:37:33.983850",
+      "finished_at": "2026-01-12T18:37:33.983853",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 17,
+      "total": 19,
+      "tool": "commix",
+      "category": "Injection",
+      "status": "BLOCKED",
+      "outcome": "BLOCKED",
+      "reason": "payload_readiness_failed: endpoint_missing",
+      "return_code": null,
+      "timed_out": false,
+      "failure_reason": "blocked_by_prerequisite",
+      "started_at": "2026-01-12T18:37:33.983897",
+      "finished_at": "2026-01-12T18:37:33.983899",
+      "stderr_preview": "",
+      "stderr_length": 0,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL"
+    },
+    {
+      "index": 18,
+      "total": 19,
+      "tool": "nuclei_crit",
+      "category": "Nuclei",
+      "status": "FAILED",
+      "outcome": "EXECUTION_ERROR",
+      "reason": "unknown_error",
+      "return_code": 1,
+      "timed_out": false,
+      "failure_reason": "unknown_error",
+      "started_at": "2026-01-12T18:37:33.983984",
+      "finished_at": "2026-01-12T18:37:36.607169",
+      "stderr_preview": "[\u001b[1;31mFTL\u001b[0m] Could not run nuclei: no templates provided for scan",
+      "stderr_length": 69,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL",
+      "output_file": "scan_results_ltce.in_20260112_183123/nuclei_crit.txt"
+    },
+    {
+      "index": 19,
+      "total": 19,
+      "tool": "nuclei_high",
+      "category": "Nuclei",
+      "status": "FAILED",
+      "outcome": "EXECUTION_ERROR",
+      "reason": "unknown_error",
+      "return_code": 1,
+      "timed_out": false,
+      "failure_reason": "unknown_error",
+      "started_at": "2026-01-12T18:37:36.611201",
+      "finished_at": "2026-01-12T18:37:38.792732",
+      "stderr_preview": "[\u001b[1;31mFTL\u001b[0m] Could not run nuclei: no templates provided for scan",
+      "stderr_length": 69,
+      "stderr_truncated": false,
+      "signal": "NO_SIGNAL",
+      "output_file": "scan_results_ltce.in_20260112_183123/nuclei_high.txt"
+    }
+  ],
+  "category_summary": {
+    "DNS": {
+      "success": 1,
+      "failed": 0
+    },
+    "Subdomains": {
+      "success": 3,
+      "failed": 0
+    },
+    "Network": {
+      "success": 2,
+      "failed": 1
+    },
+    "Web": {
+      "success": 1,
+      "failed": 3
+    },
+    "SSL": {
+      "success": 1,
+      "failed": 1
+    },
+    "XSS": {
+      "success": 0,
+      "failed": 2
+    },
+    "SQLi": {
+      "success": 0,
+      "failed": 1
+    },
+    "Injection": {
+      "success": 0,
+      "failed": 1
+    },
+    "Nuclei": {
+      "success": 0,
+      "failed": 2
+    }
+  },
+  "outcome_summary": {
+    "DNS": {
+      "EXECUTED_NO_SIGNAL": 1
+    },
+    "Subdomains": {
+      "SUCCESS_WITH_FINDINGS": 3
+    },
+    "Network": {
+      "SKIPPED": 1,
+      "SUCCESS_WITH_FINDINGS": 2
+    },
+    "Web": {
+      "EXECUTED_NO_SIGNAL": 1,
+      "SUCCESS_WITH_FINDINGS": 1,
+      "SKIPPED": 1,
+      "EXECUTION_ERROR": 1
+    },
+    "SSL": {
+      "SUCCESS_WITH_FINDINGS": 1,
+      "BLOCKED": 1
+    },
+    "XSS": {
+      "BLOCKED": 2
+    },
+    "SQLi": {
+      "BLOCKED": 1
+    },
+    "Injection": {
+      "BLOCKED": 1
+    },
+    "Nuclei": {
+      "EXECUTION_ERROR": 2
+    }
+  },
+  "findings": {
+    "total": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0,
+      "INFO": 0
+    },
+    "findings": []
+  },
+  "discoveries": {
+    "endpoints": 0,
+    "live_endpoints": 0,
+    "params": 10,
+    "reflections": 0,
+    "subdomains": 9,
+    "ports": 13
+  },
+  "discovery_completeness": {
+    "complete": true,
+    "missing_signals": [
+      "tech_stack"
+    ],
+    "present_signals": [
+      "dns_resolved",
+      "https",
+      "ports_known",
+      "reachable",
+      "subdomains",
+      "web_target"
+    ],
+    "completeness_score": 1.0,
+    "recommendations": [
+      "Run whatweb to identify web technologies"
+    ]
+  },
+  "deduplication": {
+    "duplicate_groups": 0,
+    "total_duplicates_removed": 0,
+    "groups": []
+  },
+  "payload_attempts": {
+    "total_attempts": 0,
+    "successful_attempts": 0,
+    "success_rate": 0.0,
+    "by_type": {},
+    "attempts": []
+  },
+  "payload_outcomes": {
+    "total_attempts": 0,
+    "by_outcome": {},
+    "confirmed_vulns": 0,
+    "no_signal": 0,
+    "blocked": 0
+  },
+  "coverage": {
+    "tested": {
+      "endpoints": [],
+      "parameters": [
+        "external_intel_crtsh",
+        "subdomain_autodiscover.ltce.in",
+        "subdomain_cpanel.ltce.in",
+        "subdomain_cpcalendars.ltce.in",
+        "subdomain_cpcontacts.ltce.in",
+        "subdomain_ltce.in",
+        "subdomain_mail.ltce.in",
+        "subdomain_webdisk.ltce.in",
+        "subdomain_webmail.ltce.in",
+        "subdomain_www.ltce.in"
+      ],
+      "methods": [],
+      "tools": [
+        "dnsrecon",
+        "findomain",
+        "sublist3r",
+        "assetfinder",
+        "nmap_quick",
+        "nmap_vuln",
+        "whatweb",
+        "sslscan"
+      ]
+    },
+    "blocked": {
+      "tools": [
+        "dalfox",
+        "xsstrike",
+        "sqlmap",
+        "commix"
+      ],
+      "reasons": {
+        "dalfox": "readiness_failed",
+        "xsstrike": "readiness_failed",
+        "sqlmap": "readiness_failed",
+        "commix": "readiness_failed"
+      }
+    },
+    "coverage_gaps": [
+      {
+        "tool": "dalfox",
+        "category": "XSS",
+        "reason": "readiness_failed",
+        "impact": "dalfox prerequisites not met",
+        "remediation": "Verify tool prerequisites (params, methods, context)"
+      },
+      {
+        "tool": "xsstrike",
+        "category": "XSS",
+        "reason": "readiness_failed",
+        "impact": "xsstrike prerequisites not met",
+        "remediation": "Verify tool prerequisites (params, methods, context)"
+      },
+      {
+        "tool": "sqlmap",
+        "category": "SQLi",
+        "reason": "readiness_failed",
+        "impact": "sqlmap prerequisites not met",
+        "remediation": "Verify tool prerequisites (params, methods, context)"
+      },
+      {
+        "tool": "commix",
+        "category": "Injection",
+        "reason": "readiness_failed",
+        "impact": "commix prerequisites not met",
+        "remediation": "Verify tool prerequisites (params, methods, context)"
+      }
+    ],
+    "summary": {
+      "total_tools_planned": 12,
+      "tools_executed": 8,
+      "tools_blocked": 4,
+      "execution_rate": 0.6666666666666666,
+      "endpoints_tested": 0,
+      "parameters_tested": 10
+    }
+  },
+  "enforcement": {
+    "all_executed_in_ledger": true,
+    "all_meta_present": true,
+    "execution_order_documented": true
+  },
+  "confidence": {
+    "DNS": {
+      "success_ratio": 1.0,
+      "level": "high"
+    },
+    "Subdomains": {
+      "success_ratio": 1.0,
+      "level": "high"
+    },
+    "Network": {
+      "success_ratio": 0.67,
+      "level": "medium"
+    },
+    "Web": {
+      "success_ratio": 0.25,
+      "level": "low"
+    },
+    "SSL": {
+      "success_ratio": 0.5,
+      "level": "medium"
+    },
+    "XSS": {
+      "success_ratio": 0.0,
+      "level": "low"
+    },
+    "SQLi": {
+      "success_ratio": 0.0,
+      "level": "low"
+    },
+    "Injection": {
+      "success_ratio": 0.0,
+      "level": "low"
+    },
+    "Nuclei": {
+      "success_ratio": 0.0,
+      "level": "low"
+    }
+  },
+  "timestamps": {
+    "started": "2026-01-12T18:31:23.535837",
+    "finished": "2026-01-12T18:37:38.806677"
+  },
+  "intelligence": {},
+  "vulnerabilities": {
+    "summary": {
+      "total_vulnerabilities": 0,
+      "by_type": {},
+      "by_severity": {},
+      "corroborated": 0,
+      "single_tool": 0
+    },
+    "vulnerabilities": [],
+    "by_severity": {},
+    "raw_findings_count": 8
+  },
+  "risk_aggregation": {
+    "metadata": {
+      "app_name": "ltce.in",
+      "timestamp": "2026-01-12T18:37:38.799189",
+      "total_findings": 8
+    },
+    "application_risk": {
+      "app_name": "ltce.in",
+      "risk_rating": "LOW",
+      "business_risk_score": 6.0,
+      "total_findings": 8,
+      "endpoints_scanned": 8,
+      "severity_distribution": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      },
+      "top_vulnerabilities": [
+        {
+          "vulnerability": "Information Disclosure",
+          "count": 6
+        },
+        {
+          "vulnerability": "Misconfiguration",
+          "count": 1
+        },
+        {
+          "vulnerability": "Weak Cryptography",
+          "count": 1
+        }
+      ],
+      "owasp_distribution": {
+        "A05:2021 - Security Misconfiguration": 1,
+        "Unmapped": 1,
+        "A01:2021 - Broken Access Control": 6
+      }
+    },
+    "per_endpoint": {
+      "ltce.in:21": {
+        "overall_severity": "MEDIUM",
+        "business_risk_score": 3.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "ltce.in": {
+        "overall_severity": "MEDIUM",
+        "business_risk_score": 3.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "ltce.in:25": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "ltce.in:53": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "ltce.in:110": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "ltce.in:443": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "ltce.in:587": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "ltce.in:995": {
+        "overall_severity": "LOW",
+        "business_risk_score": 0.0,
+        "parameters": [],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "per_owasp_category": {
+      "A05:2021 - Security Misconfiguration": {
+        "affected_endpoints": [
+          "ltce.in:21"
+        ],
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "Unmapped": {
+        "affected_endpoints": [
+          "ltce.in"
+        ],
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "A01:2021 - Broken Access Control": {
+        "affected_endpoints": [
+          "ltce.in:25",
+          "ltce.in:53",
+          "ltce.in:110",
+          "ltce.in:443",
+          "ltce.in:587",
+          "ltce.in:995"
+        ],
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    }
+  }
+}

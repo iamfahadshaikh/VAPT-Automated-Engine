@@ -1,0 +1,14 @@
+Tool: dirsearch
+Command: dirsearch -u https://treadbinary.com -w /usr/share/wordlists/dirb/common.txt
+Target: treadbinary.com
+Correlation ID: 20260112_181732
+Execution Time: 2026-01-12T18:22:52.074405
+Return Code: 1
+======================================================================
+
+STDOUT:
+/usr/share/wordlists/dirb/common.txt does not exist
+
+STDERR:
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict

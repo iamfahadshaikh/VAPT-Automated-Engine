@@ -1,0 +1,32 @@
+Tool: assetfinder
+Command: assetfinder treadbinary.com
+Target: treadbinary.com
+Correlation ID: 20260112_181732
+Execution Time: 2026-01-12T18:19:09.697891
+Return Code: 0
+======================================================================
+
+STDOUT:
+helpdesk.treadbinary.com
+demo.treadbinary.com
+erpnext.treadbinary.com
+erp.treadbinary.com
+erp.treadbinary.com
+treadbinary.com
+treadbinary.com
+edu.treadbinary.com
+erpnext.treadbinary.com
+erp.treadbinary.com
+helpdesk.treadbinary.com
+erpnext.treadbinary.com
+erp.treadbinary.com
+helpdesk.treadbinary.com
+erpnext.treadbinary.com
+edu.treadbinary.com
+erp.treadbinary.com
+treadbinary.com
+www.treadbinary.com
+treadbinary.com
+
+STDERR:
+[No errors]

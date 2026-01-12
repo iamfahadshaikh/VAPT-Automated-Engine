@@ -1,0 +1,18 @@
+Tool: findomain
+Command: findomain -t treadbinary.com -q
+Target: treadbinary.com
+Correlation ID: 20260112_180306
+Execution Time: 2026-01-12T18:03:28.103989
+Return Code: 0
+======================================================================
+
+STDOUT:
+erp.treadbinary.com
+demo.treadbinary.com
+treadbinary.com
+erpnext.treadbinary.com
+edu.treadbinary.com
+helpdesk.treadbinary.com
+
+STDERR:
+[No errors]
