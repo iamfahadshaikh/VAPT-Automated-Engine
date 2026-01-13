@@ -1,0 +1,23 @@
+Tool: nmap_quick
+Command: nmap -F treadbinary.com
+Target: treadbinary.com
+Correlation ID: 20260113_102024
+Execution Time: 2026-01-13T10:22:18.920084
+Return Code: 0
+======================================================================
+
+STDOUT:
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-13 10:22 IST
+Nmap scan report for treadbinary.com (20.40.48.198)
+Host is up (0.021s latency).
+Not shown: 96 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+8081/tcp open  blackice-icecap
+
+Nmap done: 1 IP address (1 host up) scanned in 2.06 seconds
+
+STDERR:
+[No errors]

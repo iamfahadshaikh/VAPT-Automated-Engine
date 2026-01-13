@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "target": "https://treadbinary.com",
+    "endpoints": 123,
+    "unique_parameters": 15,
+    "forms": 2,
+    "api_endpoints": 0,
+    "crawled_urls": 123,
+    "parameters": {
+      "post_id": [
+        ""
+      ],
+      "form_id": [
+        ""
+      ],
+      "referer_title": [
+        ""
+      ],
+      "queried_id": [
+        ""
+      ],
+      "form_fields[field_c81f22c]": [
+        ""
+      ],
+      "form_fields[name]": [
+        ""
+      ],
+      "form_fields[field_b7f40f7]": [
+        ""
+      ],
+      "form_fields[email]": [
+        ""
+      ],
+      "form_fields[field_e9925f9]": [
+        ""
+      ],
+      "form_fields[field_73a34d7]": [
+        ""
+      ],
+      "form_fields[field_97621a3]": [
+        ""
+      ],
+      "form_fields[field_13835ac]": [
+        ""
+      ],
+      "form_fields[field_2172229]": [
+        ""
+      ],
+      "ver": [
+        "1766501775",
+        "1757832795",
+        "1.13.3",
+        "4.6.13",
+        "1766498184",
+        "c26c3dc7bed366793375",
+        "3.5.4",
+        "1766038167",
+        "3.4.1",
+        "3.4.0",
+        "5.0.0",
+        "1757832785",
+        "dd5603f07f9220ed27f1",
+        "1766038483",
+        "3.2.2",
+        "3.33.2",
+        "1757832782",
+        "8.4.5",
+        "1.2.1",
+        "1766038166",
+        "0.2.1",
+        "17.0.16",
+        "1766038482",
+        "3.7.1",
+        "3.33.5"
+      ],
+      "url": [
+        "https://treadbinary.com/"
+      ]
+    },
+    "endpoints_list": [
+      "https://treadbinary.com",
+      "https://treadbinary.com#content",
+      "https://treadbinary.com#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE0MDYiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D",
+      "https://treadbinary.com#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjY4OSIsInRvZ2dsZSI6ZmFsc2V9",
+      "https://treadbinary.com#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6Ijc3NCIsInRvZ2dsZSI6ZmFsc2V9",
+      "https://treadbinary.com/",
+      "https://treadbinary.com/#press",
+      "https://treadbinary.com/about-us/",
+      "https://treadbinary.com/app-development/",
+      "https://treadbinary.com/careers/",
+      "https://treadbinary.com/cloud-atp-coming-soon/",
+      "https://treadbinary.com/comments/feed/",
+      "https://treadbinary.com/contact-us/",
+      "https://treadbinary.com/cookie-policy/",
+      "https://treadbinary.com/doscp-coming-soon/",
+      "https://treadbinary.com/feed/",
+      "https://treadbinary.com/hac/",
+      "https://treadbinary.com/harmonizer-coming-soon/",
+      "https://treadbinary.com/industry-4-0/",
+      "https://treadbinary.com/open-source-erp/",
+      "https://treadbinary.com/press/",
+      "https://treadbinary.com/press/isamra-partners-with-treadbinary-to-redefine-royalty-standards/",
+      "https://treadbinary.com/press/treadbinary-collaborates-with-rotary-club-mumbai-to-organize-blood-donation-drives/",
+      "https://treadbinary.com/press/treadbinary-launches-rural-it-empowerment-initiative-in-dapoli-to-bridge-indias-urban-rural-talent-gap/",
+      "https://treadbinary.com/press/treadbinary-transforms-education-sector-with-erpnext-from-16-disconnected-apps-to-one-unified-platform/",
+      "https://treadbinary.com/privacy-policy/",
+      "https://treadbinary.com/sap-consulting/",
+      "https://treadbinary.com/terms-and-conditions/",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/widget-form.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/widget-loop-carousel.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/widget-loop-common.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/widget-mega-menu.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1",
+      "https://treadbinary.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.33.2",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.33.5",
+      "https://treadbinary.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.33.5"
+    ],
+    "forms_list": [
+      {
+        "action": "https://treadbinary.com",
+        "method": "POST",
+        "fields": [
+          "post_id",
+          "form_id",
+          "referer_title",
+          "queried_id",
+          "form_fields[field_c81f22c]",
+          "form_fields[name]",
+          "form_fields[field_b7f40f7]",
+          "form_fields[email]",
+          "form_fields[field_e9925f9]",
+          "form_fields[field_73a34d7]",
+          "form_fields[field_97621a3]",
+          "form_fields[field_13835ac]"
+        ],
+        "found_on": "https://treadbinary.com"
+      },
+      {
+        "action": "https://treadbinary.com",
+        "method": "POST",
+        "fields": [
+          "post_id",
+          "form_id",
+          "referer_title",
+          "queried_id",
+          "form_fields[field_2172229]",
+          "form_fields[name]",
+          "form_fields[field_b7f40f7]",
+          "form_fields[email]",
+          "form_fields[field_e9925f9]",
+          "form_fields[field_73a34d7]",
+          "form_fields[field_97621a3]",
+          "form_fields[field_13835ac]"
+        ],
+        "found_on": "https://treadbinary.com"
+      }
+    ],
+    "api_endpoints_list": []
+  },
+  "results": []
+}

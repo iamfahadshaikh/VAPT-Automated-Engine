@@ -1,0 +1,13 @@
+Tool: testssl
+Command: testssl.sh https://treadbinary.com
+Target: treadbinary.com
+Correlation ID: 20260113_102024
+Execution Time: 2026-01-13T10:25:58.058351
+Return Code: 127
+======================================================================
+
+STDOUT:
+[No output]
+
+STDERR:
+/bin/sh: 1: testssl.sh: not found
